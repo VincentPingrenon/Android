@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Journal de Bord</string>
+    <string name="connect">Se Connecter</string>
+    <string name="inscription">S\'inscrire</string>
+    <string name="information_message">L\'application \"Journal de Bord\" permet a un utilisateur de rentrer des informations sur plusieurs types      d\'objectifs. Vous pouvez donc créer un journal sur le quel vous pouvez donner vos impressions sur votre journée, vos dépenses, vos     actions pour aider l\'environnement. Mais aussi créer une page de défi, sur lequel vous pouvez rentrer les efforts fait tel ou tel jours     et votre ressenti sur votre séance. Et pour finir une page pour voir les bonnes actions faites pour réduire votre addiction à quelque chose     tel que la cigarette ou les réseaux sociaux</string>
+    <string name="username_label">Nom d\'utilisateur :</string>
+    <string name="password_label">Mot de passe :</string>
+    <string name="confirm_password">Confirmer le mot de passe :</string>
+    <string name="remember">Se souvenir de moi :</string>
+</resources>
