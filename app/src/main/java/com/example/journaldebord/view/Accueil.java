@@ -1,15 +1,14 @@
-package com.example.journaldebord;
+package com.example.journaldebord.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 
-import java.util.Locale;
+import com.example.journaldebord.R;
 
-public class MainActivity extends AppCompatActivity {
+public class Accueil extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void connexion(View view) {
-        Intent intent = new Intent(MainActivity.this, Connexion.class);
+        Intent intent = new Intent(Accueil.this, Connexion.class);
         startActivity(intent);
 
     }

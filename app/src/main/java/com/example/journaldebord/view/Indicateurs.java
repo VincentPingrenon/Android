@@ -1,14 +1,16 @@
-package com.example.journaldebord;
+package com.example.journaldebord.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Connexion extends AppCompatActivity {
+import com.example.journaldebord.R;
+
+public class Indicateurs extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_connexion);
+        setContentView(R.layout.activity_indicateurs);
     }
 }
