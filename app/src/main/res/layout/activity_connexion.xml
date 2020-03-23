@@ -4,55 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Connexion">
+    tools:context=".view.Connexion">
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/loginpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="340dp"
         android:ems="10"
-        android:hint="Mot de passe"
+        android:hint="@string/password_label"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintTop_toBottomOf="@+id/loginusername"
+        app:layout_constraintVertical_bias="0.061"
+        android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/loginusername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Nom d'utilisateur"
+        android:hint="@string/username_label"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
+        app:layout_constraintVertical_bias="0.392"
+        android:importantForAutofill="no" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/connection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="240dp"
         android:text="@string/connect"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
-        app:layout_constraintVertical_bias="0.338" />
+        app:layout_constraintTop_toBottomOf="@id/switch2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Switch
         android:id="@+id/switch2"
-        android:layout_width="182dp"
-        android:layout_height="23dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/remember"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/connection"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/loginpassword"
+        app:layout_constraintVertical_bias="0.227" />
 </androidx.constraintlayout.widget.ConstraintLayout>
