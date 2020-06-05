@@ -2,6 +2,7 @@ package com.example.journaldebord.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -43,16 +44,20 @@ public class Connexion extends AppCompatActivity {
                     String username = ((EditText)findViewById(R.id.loginusername)).getText().toString();
                     String password = Base64.encodeToString((((EditText)findViewById(R.id.loginpassword)).getText().toString()).getBytes(),Base64.DEFAULT);
                     boolean connected = false;
+                    UUID idConnecte = null;
                     for(User u : infos.values()){
                         if(u.getName().equals(username) && u.getPassword().equals(password)){
                             Toast.makeText(Connexion.this, "Now connected as "+ u.getName(), Toast.LENGTH_SHORT).show();
+                            idConnecte = u.getId();
                             connected=true;
                         }
                     }
                     if(!connected){
                         Toast.makeText(Connexion.this, "Unable to find user "+ username + ". Please register before connecting", Toast.LENGTH_SHORT).show();
                     }else{
-                        setContentView(R.layout.activity_main);
+                        Intent intent = new Intent(Connexion.this, Journaux.class);
+                        intent.putExtra("idConnecte", idConnecte.toString());
+                        startActivity(intent);
                     }
                 }catch(LoginException se){
                     Log.w(LOG , ""+ se.getMessage());

@@ -13,13 +13,14 @@
         android:layout_marginBottom="340dp"
         android:ems="10"
         android:hint="@string/password_label"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginusername"
-        app:layout_constraintVertical_bias="0.061"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/loginusername"
@@ -27,13 +28,14 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/username_label"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="0.367" />
 
     <Button
         android:id="@+id/connection"
