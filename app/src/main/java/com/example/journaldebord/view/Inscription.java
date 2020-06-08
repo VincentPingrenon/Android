@@ -33,7 +33,6 @@ import java.util.UUID;
  */
 public class Inscription extends AppCompatActivity {
     private static final String LOG = "Inscription";
-    private boolean finished = false;
 
     /**
      * Method by default
@@ -64,7 +63,6 @@ public class Inscription extends AppCompatActivity {
                     }
                     OutputStream out = new FileOutputStream(filename);
                     storeLoginInfos(infos,out);
-                    finished = true;
                     Inscription.this.finish();
                 }catch(LoginException se){
                     Log.w(LOG , "" + se.getMessage());

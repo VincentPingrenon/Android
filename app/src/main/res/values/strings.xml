@@ -7,4 +7,24 @@
     <string name="password_label">Mot de passe :</string>
     <string name="confirm_password">Confirmer le mot de passe :</string>
     <string name="remember">Se souvenir de moi :</string>
+    <string name="title_activity_accueil_connecte">AccueilConnecte</string>
+    <string name="title_activity_journaux">Journaux</string>
+    <string name="date">jj/mm/aaaa</string>
+    <string name="defiName">Nom du défi</string>
+    <string name="defiDebut">Début du défi</string>
+    <string name="defiFin">Fin du défi</string>
+    <string name="selectorType">Choissisez un selecteur</string>
+    <string name="addDefi">Ajouter un défi</string>
+    <string name="textDetail">Choissisez un selecteurs dans la liste et ajoutait le avec le +</string>
+
+
+    <string-array name="selectors_array">
+        <item>Oui/Non</item>
+        <item>Date</item>
+        <item>Heure</item>
+        <item>Image</item>
+        <item>Nombre</item>
+        <item>Satisfaction</item>
+        <item>Texte</item>
+    </string-array>
 </resources>
