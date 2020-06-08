@@ -13,7 +13,7 @@
     <string name="defiName">Nom du défi</string>
     <string name="defiDebut">Début du défi</string>
     <string name="defiFin">Fin du défi</string>
-    <string name ="selectorType">Choissisez un selecteur</string>
+    <string name="selectorType">Choissisez un selecteur</string>
     <string name="addDefi">Ajouter un défi</string>
     <string name="textDetail">Choissisez un selecteurs dans la liste et ajoutait le avec le +</string>
 

@@ -1,8 +1,10 @@
 package com.example.journaldebord.indicateurs;
 
-import java.util.UUID;
+import java.io.Serializable;
 
-public abstract class Selectors<T> {
+public abstract class Selectors<T> implements Serializable, Comparable {
+
+    private static final long serialVersionUID = -5084306426110879371L;
 
     protected int id;
     protected String name;
@@ -15,6 +17,8 @@ public abstract class Selectors<T> {
     public abstract int getPosition();
     public abstract T getValue();
     public abstract String getDate();
+
+    public abstract String getType();
 
     public abstract void setId(int id);
     public abstract void setName(String name);

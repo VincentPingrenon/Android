@@ -6,15 +6,19 @@ package com.example.journaldebord.indicateurs;
  */
 public class BooleanSelector extends Selectors<Boolean> {
 
+    public BooleanSelector() {
+    }
+
     /**
      * This is the constructor for the yes-no selector
      * @param id the id of the selector (new or reused)
      * @param position the position (1st .... to last in line)
+     * @param name The name of the component
      * @param value the value of the selector (0 or 1 here)
      */
-    public BooleanSelector(int id, int position, Boolean value, String date){
+    public BooleanSelector(int id, int position, String name, Boolean value, String date) {
         setId(id);
-        setName("boolean");
+        setName(name);
         setPosition(position);
         setValue(value);
         setDate(date);
@@ -46,6 +50,11 @@ public class BooleanSelector extends Selectors<Boolean> {
     }
 
     @Override
+    public String getType() {
+        return "boolean";
+    }
+
+    @Override
     public void setId(int id) {
         this.id = id;
     }
@@ -68,5 +77,13 @@ public class BooleanSelector extends Selectors<Boolean> {
     @Override
     public void setDate(String date) {
         this.date = date;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Selectors compareToThis = (Selectors) o;
+        if (position == compareToThis.getPosition()) return 0;
+        if (position > compareToThis.getPosition()) return 1;
+        return -1;
     }
 }

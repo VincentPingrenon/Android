@@ -1,21 +1,24 @@
 package com.example.journaldebord.indicateurs;
 
-import android.graphics.Bitmap;
-
 /**
  * This class the used to store an image selector as a class.
  * @author Vincent Pingrenon
  */
-public class ImageSelector extends Selectors<Bitmap> {
+public class ImageSelector extends Selectors<String> {
+
+    public ImageSelector() {
+    }
+
     /**
      * This is the constructor for the yes-no selector
      * @param id the id of the selector (new or reused)
      * @param position the position (1st .... to last in line)
+     * @param name The name of the component
      * @param value the value of the selector (0 or 1 here)
      */
-    public ImageSelector(int id, int position, Bitmap value, String date){
+    public ImageSelector(int id, int position, String name, String value, String date) {
         setId(id);
-        setName("image");
+        setName(name);
         setPosition(position);
         setValue(value);
         setDate(date);
@@ -38,13 +41,18 @@ public class ImageSelector extends Selectors<Bitmap> {
     }
 
     @Override
-    public Bitmap getValue() {
+    public String getValue() {
         return value;
     }
 
     @Override
     public String getDate() {
         return date;
+    }
+
+    @Override
+    public void setValue(String value) {
+        this.value = value;
     }
 
     @Override
@@ -63,12 +71,20 @@ public class ImageSelector extends Selectors<Bitmap> {
     }
 
     @Override
-    public void setValue(Bitmap value) {
-        this.value = value;
+    public String getType() {
+        return "image";
     }
 
     @Override
     public void setDate(String date) {
         this.date = date;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Selectors compareToThis = (Selectors) o;
+        if (position == compareToThis.getPosition()) return 0;
+        if (position > compareToThis.getPosition()) return 1;
+        return -1;
     }
 }

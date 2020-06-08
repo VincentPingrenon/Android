@@ -1,22 +1,27 @@
 package com.example.journaldebord.util;
 
 import android.util.Xml;
-import android.widget.EditText;
 
-import com.example.journaldebord.R;
 import com.example.journaldebord.indicateurs.Selectors;
 
 import org.xmlpull.v1.XmlSerializer;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.StringWriter;
 import java.util.List;
 
-public class XMLDefi {
+public class XMLDefi implements Serializable {
+
+    private static final long serialVersionUID = 6878364983674394167L;
+
     private String name;
     private String beginDate;
     private String endDate;
     private List<Selectors> selectors;
+
+    public XMLDefi() {
+    }
 
     public XMLDefi(String name, String beginDate, String endDate, List<Selectors> selectors){
         this.name = name;
@@ -39,9 +44,10 @@ public class XMLDefi {
             xS.startTag("","Selectors");
             for (Selectors selector: selectors) {
                 xS.startTag("","selector");
-                xS.startTag("","type");
+                xS.attribute("", "type", selector.getType());
+                xS.startTag("", "name");
                 xS.text(selector.getName());
-                xS.endTag("","type");
+                xS.endTag("", "name");
                 xS.startTag("","day");
                 xS.attribute("","day",selector.getDate());
                     xS.startTag("","value");
@@ -61,4 +67,37 @@ public class XMLDefi {
         }
         return writer.toString();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBeginDate() {
+        return beginDate;
+    }
+
+    public void setBeginDate(String beginDate) {
+        this.beginDate = beginDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public List<Selectors> getSelectors() {
+        return selectors;
+    }
+
+    public void setSelectors(List<Selectors> selectors) {
+        this.selectors = selectors;
+    }
+
 }

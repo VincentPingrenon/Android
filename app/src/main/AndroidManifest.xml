@@ -8,8 +8,9 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-feature android:name="android.hardware.camera"
-                    android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-feature android:name="android.hardware.camera.flash" />
 
@@ -21,16 +22,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.Journal_Creation" android:screenOrientation="portrait"></activity>
+        <activity android:name=".view.EditJournal"></activity>
+        <activity
+            android:name=".view.Journal_Creation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".view.Journaux"
             android:label="@string/title_activity_journaux"
-            android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait"/>
-        <activity android:name=".view.Upload_Photo" android:screenOrientation="portrait"/>
-        <activity android:name=".view.Indicateurs"  android:screenOrientation="portrait"/>
-        <activity android:name=".view.Connexion" android:screenOrientation="portrait"/>
-        <activity android:name=".view.Inscription" android:screenOrientation="portrait"/>
-        <activity android:name=".view.Accueil" android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.Upload_Photo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.Indicateurs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.Connexion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.Inscription"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.Accueil"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
